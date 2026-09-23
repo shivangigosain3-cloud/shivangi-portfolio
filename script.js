@@ -13,7 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const initial = window.location.hash.replace('#', '');
-  if (initial && document.getElementById(initial)) {
+  const company = document.querySelector('.company-card#' + CSS.escape(initial));
+  if (company) {
+    activate('internships');
+    company.open = true;
+  } else if (initial === 'research') {
+    activate('education');
+  } else if (initial && document.querySelector('.panel#' + CSS.escape(initial))) {
     activate(initial);
   }
 });
