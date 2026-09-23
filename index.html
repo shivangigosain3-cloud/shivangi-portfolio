@@ -96,29 +96,50 @@
           <span class="chev">＋</span>
         </summary>
         <div class="card-body">
-          <p>A week-long design exercise: a coordination request asks for a duct penetration and support bracket
-          to be added to an existing riveted structural panel, which then has to be re-analyzed for the added hole
-          and the bracket's attachment.</p>
+          <h3>Project Overview</h3>
+          <p>As part of a week-long Boeing Structures training mock project, I completed a representative aircraft modification from initial requirements through physical installation. The project involved designing a penetration through an existing structural panel for a ventilation duct and developing the bracket, reinforcement, and fastener configuration required to support the installation.</p>
+          <p>The project simulated the structural design workflow used to translate a coordination-sheet request into a manufacturable and installable solution.</p>
 
-          <div class="sketch-wrap">
-            <img src="assets/coordination-sketch.svg" alt="Sketch of a structural panel with a circular penetration and an L-shaped bracket attached with two rows of fasteners, with an applied load arrow at the bracket">
-            <p class="fine-print">Re-drawn from memory as a generic sketch — dimensions and the original coordination sheet are not reproduced.</p>
-          </div>
-
-          <h3>Approach</h3>
-          <ol class="method-list">
-            <li><strong>Loads in.</strong> Take the applied bracket load and resolve it into the running shear flow the fasteners around the cutout have to carry.</li>
-            <li><strong>Fastener type.</strong> Compare a Hi-Lok against a rivet at the joint — Hi-Loks carry more load per fastener and don't loosen under vibration, but cost more and take longer to install; rivets are cheaper and faster for lightly loaded skin joints. Diameter is sized from the running load per fastener against the manufacturer's shear allowable for a given fastener material and diameter, with margin.</li>
-            <li><strong>Fastener spacing.</strong> Space fasteners along the hole's tangent line using a pitch derived from the running load, with a knockdown factor (roughly 1.5×) applied to keep bearing and net-section stresses within standard aerospace joint-efficiency limits — this sets how many fasteners fit between the tangent lines.</li>
-            <li><strong>Geometry checks.</strong> Verify edge margin, end margin, fastener pitch, and fastener-to-part-edge distance all fall within the standard aerospace ranges for the sheet thickness and fastener diameter used (commonly expressed as ratios of hole diameter, e.g. <code>e/D</code>, <code>W/D</code>).</li>
-            <li><strong>Bending check on the bracket.</strong> Treat the bracket leg as a simple cantilever/beam under the applied load and check bending stress with <code>σ = Mc / I</code> against the material allowable, alongside the fastener bearing and shear-out checks at the bracket attach holes.</li>
+          <h3>Methodology</h3>
+          <ol class="project-methodology">
+            <li>
+              <h4>Defined requirements and constraints</h4>
+              <p>I reviewed the coordination sheet to identify the requested penetration, bracket installation, applied loads, and surrounding structural geometry. I identified additional information needed for the analysis, including web and bracket thicknesses, material properties, and allowable stresses.</p>
+              <p>I then applied the structural design criteria provided during the training for fastener pitch, edge margins, clearances, reinforcement geometry, and material thickness relationships. I also distinguished between fixed geometry and dimensions that could be modified, allowing the penetration and bracket location to be adjusted within the permitted design envelope.</p>
+            </li>
+            <li>
+              <h4>Performed structural analysis</h4>
+              <p>Using the provided vent loads and installation geometry, I determined how the loads would transfer through the bracket into the surrounding structure. I calculated the resulting bending moment and bracket section properties, then evaluated the resulting bending stress against the applicable allowable.</p>
+              <p>From this analysis, I determined the minimum structural section required and identified the need for additional reinforcement around the penetration.</p>
+            </li>
+            <li>
+              <h4>Designed the doubler and restored the load path</h4>
+              <p>I designed a local doubler to reinforce the existing web and restore the load path interrupted by the new penetration. The doubler thickness and overall dimensions were selected based on the existing web geometry, structural requirements, available installation space, and the design criteria provided during training.</p>
+              <p>I also evaluated the running load through the web and determined the load interrupted by the penetration, which established the load that needed to be redistributed through the doubler and its attachments.</p>
+            </li>
+            <li>
+              <h4>Developed the fastener layout</h4>
+              <p>I selected Hi-Lok fasteners and developed the attachment pattern required to transfer load between the web and doubler. The layout was designed while satisfying fastener spacing, edge-margin, penetration-clearance, and installation requirements.</p>
+              <p>Where possible, I adjusted the bracket and penetration geometry to utilize existing attachment locations, reducing unnecessary modifications while also improving the structural load path.</p>
+            </li>
+            <li>
+              <h4>Iterated and verified the final design</h4>
+              <p>I iterated the penetration location, bracket geometry, doubler dimensions, and fastener pattern as a complete system. The final configuration was checked for bracket bending, reinforcement capability, load transfer, fastener arrangement, and compliance with the structural design criteria provided during the training.</p>
+            </li>
+            <li>
+              <h4>Fabricated and installed the design</h4>
+              <p>After completing the analysis and finalizing the design, the components were fabricated for physical validation, including <strong>3D printing the designed bracket</strong>. I then installed the bracket, doubler, fasteners, and penetration configuration on a representative mock aircraft structure.</p>
+              <p>This final assembly provided hands-on experience translating an analytical design into hardware and demonstrated the importance of considering <strong>manufacturability, accessibility, tolerances, fastener installation, and assembly sequence</strong> during the design process.</p>
+            </li>
           </ol>
 
-          <h3>Force diagram / load path — seat &amp; airframe (redrawn for this page)</h3>
-          <div class="sketch-wrap">
-            <img src="assets/load-path.svg" alt="Simplified diagram showing occupant inertial load flowing from a seat through the seat legs and track fittings into the aircraft floor beams and out to the fuselage frames">
-            <p class="fine-print">General concept diagram of how a seat's inertial load path flows to the airframe — not a reproduction of any specific analysis.</p>
-          </div>
+          <h3>Outcome</h3>
+          <p>The week-long project took a representative aircraft modification through the complete engineering workflow.</p>
+
+          <h3>Project Scope &amp; Limitations</h3>
+          <p>This was a one-week training project intended to introduce the structural design and installation workflow rather than replicate the full aircraft modification process. As a result, several aspects of a production design were simplified or provided as assumptions. A real aircraft modification of this type would require significantly more analysis, documentation, testing, and cross-functional coordination before being approved for installation.</p>
+          <p>Additional considerations in a production environment could include detailed material and temper selection, fatigue and damage-tolerance analysis, additional joint and fastener failure modes, manufacturing and assembly tolerances, corrosion protection, accessibility and maintainability, tooling and installation planning, inspection requirements, and verification of interfaces with surrounding aircraft systems. The design would also undergo formal engineering reviews and require collaboration across Structures, Design, Manufacturing, Systems, Quality, and other relevant teams before ultimately satisfying applicable certification and airworthiness requirements.</p>
+          <p>The project therefore focused specifically on developing the <strong>fundamental structural design process—interpreting requirements, understanding the load path, performing preliminary structural calculations, designing reinforcement and attachments, and translating the resulting design into a physical mock-up.</strong></p>
         </div>
       </details>
 
