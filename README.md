@@ -10,10 +10,6 @@ script.js       tab switching
 assets/         CAD.pdf, resume.pdf, SVG diagrams
 ```
 
-## Before you deploy
-- Skim the Boeing and GE Vernova callout boxes and the CAD PDF — double check with a Boeing/GE contact
-  that these are okay to post publicly before this goes live anywhere.
-
 ## Advanced CAD PDF
 Keep `assets/CAD.pdf` in the `assets/` folder alongside the other site assets when uploading or deploying the site. The Advanced CAD card links directly to this file.
 
