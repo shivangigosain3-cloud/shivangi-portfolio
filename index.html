@@ -19,8 +19,8 @@
   <div class="topbar-inner">
     <div class="mark">SG<span>·</span>ME</div>
     <nav class="crumbs" aria-label="Section navigation">
-      <button class="tab-btn active" data-tab="internships">Internships</button>
-      <button class="tab-btn" data-tab="education">Education</button>
+      <button class="tab-btn active" data-tab="education">Education</button>
+      <button class="tab-btn" data-tab="internships">Internships</button>
     </nav>
     <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">☀ Light</button>
     <a class="resume-link" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
@@ -45,8 +45,123 @@
 
 <main>
 
+  <!-- ============ EDUCATION ============ -->
+  <section class="panel active" id="education">
+    <div class="panel-head">
+      <h2>Education</h2>
+      <p class="role">Georgia Institute of Technology — B.S. Mechanical Engineering, 2024–May 2027, GPA 3.9</p>
+    </div>
+
+    <div class="accordion">
+
+      <details class="card" open>
+        <summary>
+          <span class="card-title">ME 2110 — Creative Decisions &amp; Design: "Train Your Dragon" Competition Robot</span>
+          <span class="chev">＋</span>
+        </summary>
+        <div class="card-body">
+          <p>Semester-long capstone-style team project to design, build, and iterate a competition robot completing five tasks: launch and deploy,
+          extinguish a fire, refill feeding stations, return sheep to paddocks, and light a bonfire.</p>
+
+          <h3>Subsystems</h3>
+          <ul>
+            <li><strong>Drivetrain</strong> — dual-axle, belt-and-gear driven; iterated after wire drag and belt tension were costing wheel friction.</li>
+            <li><strong>Sheep dispenser</strong> — went through three iterations (ramp turnstile → vertical dispenser → piston-actuated vertical dispenser) chasing a 95% reliable single-sheep release, root-causing each jam before redesigning.</li>
+            <li><strong>Sweeping "wing" mechanism</strong> — hinged, spring-loaded arms released by a locking rod to sweep torches onto the target.</li>
+            <li><strong>Three-stage telescoping arm</strong> — concentric PVC pipes linked by nylon thread and a motor-driven spool, to extend and flip a lever roughly 42" away.</li>
+          </ul>
+
+          <h3>Process</h3>
+          <p>Used a function tree to translate competition tasks into engineering requirements (e.g. "Extinguish Fire"
+          became "Activate Lever"), then a morph chart to compare candidate mechanisms before committing to CAD and
+          fabrication — for example, weighing a simple mechanical turnstile against a pressurized piston system for
+          the sheep task before building and testing both.</p>
+
+          <h3>Results</h3>
+          <p>Scored above the field median in each sprint (own score ~50–70 vs. a median of ~40 in Sprint 2; ~70 vs
+          ~70 in Sprint 3) and reached 95%+ task completion by final competition week, ultimately eliminated in the
+          Sweet 16.</p>
+
+          <p><a href="assets/me2110-presentation.pdf" target="_blank" rel="noopener">Full final design presentation (PDF) ↗</a></p>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <span class="card-title">Relevant Classes</span>
+          <span class="chev">＋</span>
+        </summary>
+        <div class="card-body">
+          <ul class="course-list">
+            <li>Machine Design</li>
+            <li>Fluid Mechanics</li>
+            <li>Thermodynamics</li>
+            <li>Deformable Bodies / Mechanics of Materials</li>
+            <li>System Dynamics</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <span class="card-title">Advanced CAD</span>
+          <span class="chev">＋</span>
+        </summary>
+        <div class="card-body">
+          <p>Solid modeling, freeform surfacing, and 3D-sketch/sweep exercises — dimensioned drawing sheets with
+          section views, isometrics, and title blocks, done at the University of Georgia.</p>
+
+          <p><a href="assets/CAD.pdf" target="_blank" rel="noopener" type="application/pdf">View Advanced CAD portfolio (PDF, 25 pages) ↗</a></p>
+        </div>
+      </details>
+
+      <details class="card">
+        <summary>
+          <span class="card-title">Technical Skills</span>
+          <span class="chev">＋</span>
+        </summary>
+        <div class="card-body">
+          <div class="skill-tags">
+            <span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span>
+            <span>ANSYS</span><span>FEA</span><span>Python</span><span>MATLAB</span><span>Java</span>
+            <span>C++</span><span>ROS</span><span>OpenCV</span><span>Power BI</span>
+            <span>Manufacturing</span><span>GD&amp;T</span>
+          </div>
+        </div>
+      </details>
+      <h3 class="education-group-title">Research &amp; Leadership</h3>
+<details class="card" open>
+        <summary>
+          <span class="card-title">Research at UGA — MiR &amp; UR10 Integration</span>
+          <span class="chev">＋</span>
+        </summary>
+        <div class="card-body">
+          <p class="fine-print">Innovation Factory at UGA · Undergraduate Researcher with Dr. Jaime Camelio · Aug 2023 to May 2024</p>
+          <ul>
+            <li>Researched integrating mobile robots (MiR) and a UR10 arm into a technology-focused production line.</li>
+            <li>Used ROS, OpenCV, AR tags, and various sensors to automate the process and improve throughput.</li>
+            <li>Surveyed current literature to identify further improvement opportunities.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="card">
+        <summary>
+          <span class="card-title">The Gift of Learning — Co-Founder &amp; Executive Director</span>
+          <span class="chev">＋</span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li>Recruited 1,000+ tutors, students, and ambassadors internationally; built partnerships with nonprofits, schools, and industry.</li>
+            <li>Led donation drives distributing 1,000+ books and $200+ in school supplies to students in Ghana, the Philippines, and beyond.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </section>
+
+
   <!-- ============ INTERNSHIPS ============ -->
-  <section class="panel active" id="internships">
+  <section class="panel" id="internships">
     <div class="panel-head">
       <h2>Internships</h2>
     </div>
@@ -180,122 +295,6 @@
       </details>
     </div>
   </section>
-
-  <!-- ============ EDUCATION ============ -->
-  <section class="panel" id="education">
-    <div class="panel-head">
-      <h2>Education</h2>
-      <p class="role">Georgia Institute of Technology — B.S. Mechanical Engineering, 2024–May 2027, GPA 3.9</p>
-    </div>
-
-    <div class="accordion">
-
-      <details class="card" open>
-        <summary>
-          <span class="card-title">ME 2110 — Creative Decisions &amp; Design: "Train Your Dragon" Competition Robot</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p>Semester-long capstone-style team project (with Franchesca Clegg, Catherine Thurston, and Christopher
-          Lucas) to design, build, and iterate a competition robot completing five tasks: launch and deploy,
-          extinguish a fire, refill feeding stations, return sheep to paddocks, and light a bonfire.</p>
-
-          <h3>Subsystems</h3>
-          <ul>
-            <li><strong>Drivetrain</strong> — dual-axle, belt-and-gear driven; iterated after wire drag and belt tension were costing wheel friction.</li>
-            <li><strong>Sheep dispenser</strong> — went through three iterations (ramp turnstile → vertical dispenser → piston-actuated vertical dispenser) chasing a 95% reliable single-sheep release, root-causing each jam before redesigning.</li>
-            <li><strong>Sweeping "wing" mechanism</strong> — hinged, spring-loaded arms released by a locking rod to sweep torches onto the target.</li>
-            <li><strong>Three-stage telescoping arm</strong> — concentric PVC pipes linked by nylon thread and a motor-driven spool, to extend and flip a lever roughly 42" away.</li>
-          </ul>
-
-          <h3>Process</h3>
-          <p>Used a function tree to translate competition tasks into engineering requirements (e.g. "Extinguish Fire"
-          became "Activate Lever"), then a morph chart to compare candidate mechanisms before committing to CAD and
-          fabrication — for example, weighing a simple mechanical turnstile against a pressurized piston system for
-          the sheep task before building and testing both.</p>
-
-          <h3>Results</h3>
-          <p>Scored above the field median in each sprint (own score ~50–70 vs. a median of ~40 in Sprint 2; ~70 vs
-          ~70 in Sprint 3) and reached 95%+ task completion by final competition week, ultimately eliminated in the
-          Sweet 16.</p>
-
-          <p><a href="assets/me2110-presentation.pdf" target="_blank" rel="noopener">Full final design presentation (PDF) ↗</a></p>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary>
-          <span class="card-title">Relevant Classes</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <ul class="course-list">
-            <li>Machine Design</li>
-            <li>Fluid Mechanics</li>
-            <li>Thermodynamics</li>
-            <li>Deformable Bodies / Mechanics of Materials</li>
-            <li>System Dynamics</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary>
-          <span class="card-title">Advanced CAD</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p>Solid modeling, freeform surfacing, and 3D-sketch/sweep exercises — dimensioned drawing sheets with
-          section views, isometrics, and title blocks, done at the University of Georgia.</p>
-
-          <p><a href="assets/CAD.pdf" target="_blank" rel="noopener" type="application/pdf">View Advanced CAD portfolio (PDF, 25 pages) ↗</a></p>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary>
-          <span class="card-title">Technical Skills</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <div class="skill-tags">
-            <span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span>
-            <span>ANSYS</span><span>FEA</span><span>Python</span><span>MATLAB</span><span>Java</span>
-            <span>C++</span><span>ROS</span><span>OpenCV</span><span>Power BI</span>
-            <span>Manufacturing</span><span>GD&amp;T</span>
-          </div>
-        </div>
-      </details>
-      <h3 class="education-group-title">Research &amp; Leadership</h3>
-<details class="card" open>
-        <summary>
-          <span class="card-title">Research at UGA — MiR &amp; UR10 Integration</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p class="fine-print">Innovation Factory at UGA · Undergraduate Researcher with Dr. Jaime Camelio · Aug 2023 to May 2024</p>
-          <ul>
-            <li>Researched integrating mobile robots (MiR) and a UR10 arm into a technology-focused production line.</li>
-            <li>Used ROS, OpenCV, AR tags, and various sensors to automate the process and improve throughput.</li>
-            <li>Surveyed current literature to identify further improvement opportunities.</li>
-          </ul>
-        </div>
-      </details>
-      <details class="card">
-        <summary>
-          <span class="card-title">The Gift of Learning — Co-Founder &amp; Executive Director</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <ul>
-            <li>Recruited 1,000+ tutors, students, and ambassadors internationally; built partnerships with nonprofits, schools, and industry.</li>
-            <li>Led donation drives distributing 1,000+ books and $200+ in school supplies to students in Ghana, the Philippines, and beyond.</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-  </section>
-
 </main>
 
 <footer>
