@@ -14,22 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemeToggle();
   });
 
-  function revealProject(id) {
-    const target = document.getElementById(id);
-    if (!target) return;
-    if (target.tagName === 'DETAILS') target.open = true;
-    let parent = target.parentElement;
-    while (parent) {
-      if (parent.tagName === 'DETAILS') parent.open = true;
-      parent = parent.parentElement;
-    }
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+
+  function activate(id) {
+    panels.forEach(p => p.classList.toggle('active', p.id === id));
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+    history.replaceState(null, '', '#' + id);
   }
-  document.querySelectorAll('[data-open-target]').forEach(link => {
-    link.addEventListener('click', () => revealProject(link.dataset.openTarget));
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => activate(btn.dataset.tab));
   });
-  const initial = decodeURIComponent(location.hash.slice(1));
-  if (initial && document.getElementById(initial)?.tagName === 'DETAILS') {
-    requestAnimationFrame(() => revealProject(initial));
+
+  const initial = window.location.hash.replace('#', '');
+  const company = document.querySelector('.company-card#' + CSS.escape(initial));
+  if (company) {
+    activate('internships');
+    company.open = true;
+  } else if (initial === 'research') {
+    activate('education');
+  } else if (initial && document.querySelector('.panel#' + CSS.escape(initial))) {
+    activate(initial);
   }
 });
