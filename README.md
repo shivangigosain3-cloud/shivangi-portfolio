@@ -6,7 +6,7 @@ Plain HTML/CSS/JS, no build step. Free to host on Vercel.
 ```
 index.html      site content
 style.css       styling
-script.js       tab switching
+script.js       scroll progress, active nav, reveal animations, theme toggle
 assets/         CAD.pdf, resume.pdf, SVG diagrams
 ```
 

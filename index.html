@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shivangi Gosain — Mechanical Engineer</title>
+<meta name="description" content="Shivangi Gosain — Mechanical Engineering at Georgia Tech. Structures, aerospace, and mechanisms. Internships at Boeing, GE Vernova, Shaw Industries, and IVue.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -11,296 +12,397 @@
   try {
     if (localStorage.getItem('portfolio-theme') === 'light') document.documentElement.dataset.theme = 'light';
   } catch (_) { /* Keep the default theme when storage is unavailable. */ }
+  document.documentElement.classList.add('js');
 </script>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="topbar-inner">
-    <div class="mark">SG<span>·</span>ME</div>
-    <nav class="crumbs" aria-label="Section navigation">
-      <button class="tab-btn active" data-tab="education">Education</button>
-      <button class="tab-btn" data-tab="internships">Internships</button>
-    </nav>
-    <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">☀ Light</button>
-    <a class="resume-link" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
-  </div>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Section navigation">
+    <a class="mark" href="#top">SG<span>·</span>ME</a>
+    <div class="nav-links">
+      <a href="#internships">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">☀</button>
+    <a class="nav-cta" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+  </nav>
 </header>
 
-<section class="hero">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
   <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <p class="zone-ref">SHEET 1 / REV A</p>
-    <h1>Shivangi Gosain</h1>
-    <div class="hero-about">
-      <p class="hero-credential">Mechanical Engineering at Georgia Tech (GPA: 3.9)<br>Expected graduation May 2027</p>
-      <p>Through internships at Boeing, GE Vernova, and Shaw Industries, I’ve worked on aircraft seat structures, turbine blade repair analysis, and manufacturing improvements. I have also won national awards in Animatronics and Flight design through the Technology Student Association. My experience spans CAD, finite element analysis, hands-on design, and automation, with a focus on connecting engineering analysis to how things are built and used.</p>
-      <p>I’m especially drawn to aerospace, structures, and mechanisms—and the challenge of building hardware that performs reliably in demanding environments.</p>
+  <div class="wrap hero-inner">
+    <p class="zone-ref reveal">SHEET 1 / REV A · MECHANICAL ENGINEERING · GEORGIA TECH</p>
+    <h1 class="reveal">Shivangi<br><span class="accent">Gosain</span></h1>
+    <div class="hero-row">
+      <div class="hero-lede reveal">
+        <p>Mechanical Engineering student at Georgia Tech focused on aerospace, structures, and mechanisms. I’ve interned at <a class="co" href="#boeing">Boeing</a>, <a class="co" href="#ge">GE Vernova</a>, and <a class="co" href="#shaw">Shaw Industries</a> — working on aircraft seat structures, turbine blade repair analysis, and manufacturing improvements.</p>
+      </div>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#internships">View experience ↓</a>
+        <a class="btn" href="#projects">View projects ↓</a>
+      </div>
     </div>
-    <div class="hero-meta">
-      <a href="mailto:shivangigosain3@gmail.com">shivangigosain3@gmail.com</a>
-      <span class="dot">/</span>
-      <a href="https://www.linkedin.com/in/shivangi-gosain/" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="hero-boxes">
+      <div class="hero-box reveal">
+        <p class="box-label">Education</p>
+        <h2 class="box-title">Georgia Tech</h2>
+        <p class="box-line">B.S. Mechanical Engineering</p>
+        <p class="box-line">Graduating May 2027 · GPA 3.9</p>
+      </div>
+      <div class="hero-box reveal">
+        <p class="box-label">Skills</p>
+        <div class="tags side-tags">
+          <span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span><span>Autodesk Inventor</span><span>GD&amp;T</span>
+          <span>ANSYS</span><span>FEA</span><span>MATLAB</span><span>Stack-Up Analysis</span>
+          <span>Python</span><span>Java</span><span>ROS</span><span>OpenCV</span>
+          <span>CNC Milling</span><span>3D Printing</span><span>Data Acquisition</span><span>Excel VBA</span><span>Power BI</span>
+        </div>
+      </div>
+      <div class="hero-box reveal">
+        <p class="box-label">Experience</p>
+        <ul class="box-list">
+          <li>Design</li><li>Analysis</li><li>Manufacturing</li><li>Instrumentation</li><li>Test Engineering</li><li>Product Development</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <main>
 
-  <!-- ============ EDUCATION ============ -->
-  <section class="panel active" id="education">
-    <div class="panel-head">
-      <h2>Education</h2>
-      <p class="role">Georgia Institute of Technology — B.S. Mechanical Engineering, 2024–May 2027, GPA 3.9</p>
-    </div>
+  <!-- ============ 01 EXPERIENCE ============ -->
+  <section class="section" id="internships">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>01</span> / Experience</p>
+      <h2 class="section-title reveal">Where I’ve <span class="accent">worked</span>.</h2>
 
-    <div class="accordion">
-
-      <details class="card" open>
-        <summary>
-          <span class="card-title">ME 2110 — Creative Decisions &amp; Design: "Train Your Dragon" Competition Robot</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p>Semester-long capstone-style team project to design, build, and iterate a competition robot completing five tasks: launch and deploy,
-          extinguish a fire, refill feeding stations, return sheep to paddocks, and light a bonfire.</p>
-
-          <h3>Subsystems</h3>
-          <ul>
-            <li><strong>Drivetrain</strong> — dual-axle, belt-and-gear driven; iterated after wire drag and belt tension were costing wheel friction.</li>
-            <li><strong>Sheep dispenser</strong> — went through three iterations (ramp turnstile → vertical dispenser → piston-actuated vertical dispenser) chasing a 95% reliable single-sheep release, root-causing each jam before redesigning.</li>
-            <li><strong>Sweeping "wing" mechanism</strong> — hinged, spring-loaded arms released by a locking rod to sweep torches onto the target.</li>
-            <li><strong>Three-stage telescoping arm</strong> — concentric PVC pipes linked by nylon thread and a motor-driven spool, to extend and flip a lever roughly 42" away.</li>
-          </ul>
-
-          <h3>Process</h3>
-          <p>Used a function tree to translate competition tasks into engineering requirements (e.g. "Extinguish Fire"
-          became "Activate Lever"), then a morph chart to compare candidate mechanisms before committing to CAD and
-          fabrication — for example, weighing a simple mechanical turnstile against a pressurized piston system for
-          the sheep task before building and testing both.</p>
-
-          <h3>Results</h3>
-          <p>Scored above the field median in each sprint (own score ~50–70 vs. a median of ~40 in Sprint 2; ~70 vs
-          ~70 in Sprint 3) and reached 95%+ task completion by final competition week, ultimately eliminated in the
-          Sweet 16.</p>
-
-          <p><a href="assets/me2110-presentation.pdf" target="_blank" rel="noopener">Full final design presentation (PDF) ↗</a></p>
+      <!-- Boeing -->
+      <article class="feature" id="boeing">
+        <div class="feature-side">
+          <p class="feature-ref">REF_E01 · MAY – AUG 2026 <span>01 / 04</span></p>
+          <h3 class="feature-title">Boeing</h3>
+          <p class="feature-role">Stress Analysis Intern</p>
+          <div class="tags"><span>CATIA</span><span>FEM</span><span>FAR compliance</span><span>Power BI</span></div>
         </div>
-      </details>
+        <div class="feature-main">
+          <div class="panel-card reveal">
+            <p class="card-label">// Projects</p>
+            <ul>
+              <li>Reviewed business-class seat certification packages for FAR and Boeing requirements.</li>
+              <li>Checked seat load paths and supplier FEM results at seat-leg attachments, and verified geometry across CATIA models and drawings.</li>
+              <li>Built a Power BI dashboard that automated daily project-status reporting, replacing a weekly manual Excel report.</li>
+            </ul>
+          </div>
 
-      <details class="card">
-        <summary>
-          <span class="card-title">Relevant Classes</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <ul class="course-list">
-            <li>Machine Design</li>
-            <li>Fluid Mechanics</li>
-            <li>Thermodynamics</li>
-            <li>Deformable Bodies / Mechanics of Materials</li>
-            <li>System Dynamics</li>
-          </ul>
-        </div>
-      </details>
+          <div class="panel-card reveal">
+            <p class="card-label">// Structural Panel Design</p>
+            <p>Week-long Boeing Structures training project: designed a vent-duct penetration through a structural panel, with its bracket, doubler, and fasteners, then built and installed it on a mock structure.</p>
+            <ol class="steps steps-detail">
+              <li><strong>Requirements</strong><span>Loads, geometry, and design criteria from the coordination sheet</span></li>
+              <li><strong>Solution &amp; Analysis</strong><span>Bracket bending, doubler sizing, and Hi-Lok fastener layout</span></li>
+              <li><strong>Testing &amp; Installation</strong><span>3D-printed bracket installed on a mock aircraft structure</span></li>
+            </ol>
+            <details class="more">
+              <summary>Full methodology <span class="chev">＋</span></summary>
+              <div class="more-body">
+                <div class="method">
+                  <h4><span>01</span> Requirements</h4>
+                  <ul>
+                    <li>Pulled the penetration, bracket, applied loads, and surrounding geometry from the coordination sheet.</li>
+                    <li>Identified missing inputs — web and bracket thickness, material properties, allowable stresses.</li>
+                    <li>Applied design criteria for fastener pitch, edge margin, clearance, and reinforcement, and separated fixed geometry from what could move.</li>
+                  </ul>
+                </div>
+                <div class="method">
+                  <h4><span>02</span> Solution &amp; Analysis</h4>
+                  <ul>
+                    <li><strong>Bracket:</strong> traced the vent load path, calculated bending moment and section properties, and checked bending stress against the allowable.</li>
+                    <li><strong>Doubler:</strong> sized a local doubler from the running load interrupted by the penetration to restore the web’s load path.</li>
+                    <li><strong>Fasteners:</strong> laid out Hi-Lok fasteners for pitch, edge margin, and clearance, reusing existing holes where possible.</li>
+                    <li><strong>Iteration:</strong> adjusted penetration location, bracket, doubler, and fasteners together until every check passed.</li>
+                  </ul>
+                </div>
+                <div class="method">
+                  <h4><span>03</span> Testing &amp; Installation</h4>
+                  <ul>
+                    <li>3D-printed the bracket and installed the bracket, doubler, fasteners, and penetration on a mock aircraft structure.</li>
+                    <li>Learned how manufacturability, tolerances, access, and assembly sequence shape a design.</li>
+                  </ul>
+                </div>
+                <p class="fine-print">Scope: a one-week training exercise with simplified inputs. A production modification would add fatigue and damage-tolerance analysis, more failure modes, corrosion protection, inspection planning, and formal cross-functional review before certification.</p>
+              </div>
+            </details>
+          </div>
 
-      <details class="card">
-        <summary>
-          <span class="card-title">Advanced CAD</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p>Solid modeling, freeform surfacing, and 3D-sketch/sweep exercises — dimensioned drawing sheets with
-          section views, isometrics, and title blocks, done at the University of Georgia.</p>
-
-          <p><a href="assets/CAD.pdf" target="_blank" rel="noopener" type="application/pdf">View Advanced CAD portfolio (PDF, 25 pages) ↗</a></p>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary>
-          <span class="card-title">Technical Skills</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <div class="skill-tags">
-            <span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span>
-            <span>ANSYS</span><span>FEA</span><span>Python</span><span>MATLAB</span><span>Java</span>
-            <span>C++</span><span>ROS</span><span>OpenCV</span><span>Power BI</span>
-            <span>Manufacturing</span><span>GD&amp;T</span>
+          <div class="panel-card reveal">
+            <p class="card-label">// CATIA Class</p>
+            <p class="fine-print">Practice models built during a Boeing training course — not production hardware.</p>
+            <div class="cad-grid">
+              <figure>
+                <img src="assets/boeing-cad-1.png" alt="CATIA assembly study showing a linkage cluster with a computed center of gravity marker" loading="lazy">
+              </figure>
+              <figure>
+                <img src="assets/boeing-cad-2.png" alt="CATIA surface model of a fuselage-like nose section" loading="lazy">
+              </figure>
+            </div>
           </div>
         </div>
-      </details>
-      <h3 class="education-group-title">Research &amp; Leadership</h3>
-<details class="card" open>
-        <summary>
-          <span class="card-title">Research at UGA — MiR &amp; UR10 Integration</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p class="fine-print">Innovation Factory at UGA · Undergraduate Researcher with Dr. Jaime Camelio · Aug 2023 to May 2024</p>
+      </article>
+
+      <!-- GE Vernova -->
+      <article class="feature" id="ge">
+        <div class="feature-side">
+          <p class="feature-ref">REF_E02 · JUN – AUG 2025 <span>02 / 04</span></p>
+          <h3 class="feature-title">GE Vernova</h3>
+          <p class="feature-role">Design and Analysis Engineering Intern</p>
+          <div class="tags"><span>ANSYS</span><span>Siemens NX</span><span>Python</span><span>Stack-Up Analysis</span></div>
+        </div>
+        <div class="feature-main">
+          <div class="panel-card reveal">
+            <p class="card-label">// Projects</p>
+            <ul>
+              <li>Performed lifing analysis on turbine blade coatings using ANSYS APDL, including temperature/pressure mapping and structural, creep, oxidation, and LCF simulation, validated against field data.</li>
+              <li>Improved component salvageability by modifying tip-weld repair geometry; led a feasibility study on increased weld depth, working cross-functionally with Heat Transfer and Repair Engineering.</li>
+              <li>Built a Python script generating 3D response-surface models for creep-deflection prediction, improving deflection-based Operating Impact Factor (OIF) accuracy.</li>
+              <li>Ran circumferential tolerance stack-up analysis of adjacent turbine blades — machining tolerance, coating thickness, and thermal expansion — to assess interference risk in operation.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Shaw -->
+      <article class="feature" id="shaw">
+        <div class="feature-side">
+          <p class="feature-ref">REF_E03 · JUN – AUG 2024 <span>03 / 04</span></p>
+          <h3 class="feature-title">Shaw Industries</h3>
+          <p class="feature-role">Project Engineer Intern</p>
+          <div class="tags"><span>Fusion 360</span><span>Product Development</span><span>CNC Milling</span><span>Instrumentation</span><span>Data Acquisition</span><span>Excel VBA</span><span>3D Printing</span></div>
+        </div>
+        <div class="feature-main">
+          <div class="panel-card reveal">
+            <p class="card-label">// Projects</p>
+            <ul>
+              <li>Designed a Tenter Width Monitor operating at 350°F to continuously track chain-width deviation, supporting preventive maintenance and cutting unplanned machine downtime.</li>
+              <li>Designed and oversaw construction of new guarding for the shoe steamer, updated the plant layout in CAD, and assisted installing a new reversing station.</li>
+              <li>Worked directly with operators and manufacturers to identify problems on the floor and land practical design fixes.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- IVue -->
+      <article class="feature" id="ivue">
+        <div class="feature-side">
+          <p class="feature-ref">REF_E04 · MAY – AUG 2023 <span>04 / 04</span></p>
+          <h3 class="feature-title">IVue</h3>
+          <p class="feature-role">Engineering Intern</p>
+          <div class="tags"><span>Fusion 360</span><span>3D printing</span><span>Drones</span></div>
+        </div>
+        <div class="feature-main">
+          <div class="panel-card reveal">
+            <p class="card-label">// Search-and-rescue drone</p>
+            <ul>
+              <li>Designed a search-and-rescue drone spotlight module in Fusion 360, accounting for aerodynamic load, 3D-printed material properties, and field operating conditions.</li>
+              <li>Redesigned the drone's cover for easier access to the electronics, streamlining maintenance and customization.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 02 PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>02</span> / Projects</p>
+      <h2 class="section-title reveal">Things I’ve <span class="accent">built</span>.</h2>
+
+      <article class="feature" id="me2110">
+        <div class="feature-side">
+          <p class="feature-ref">REF_P01 · GEORGIA TECH · ME 2110</p>
+          <h3 class="feature-title">“Train Your Dragon” competition robot</h3>
+          <p class="feature-role">Creative Decisions &amp; Design</p>
+          <p class="feature-blurb">Semester-long capstone-style team project to design, build, and iterate a competition robot completing five tasks: launch and deploy, extinguish a fire, refill feeding stations, return sheep to paddocks, and light a bonfire.</p>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="assets/me2110-presentation.pdf" target="_blank" rel="noopener">Final presentation (PDF) ↗</a>
+          </div>
+        </div>
+        <div class="feature-main">
+          <div class="metric-row reveal">
+            <div class="metric"><span class="metric-num">95%+</span><span class="metric-label">Task completion by final week</span></div>
+            <div class="metric"><span class="metric-num">12th / 54</span><span class="metric-label">Final place out of 54 teams</span></div>
+          </div>
+          <div class="panel-card reveal">
+            <p class="card-label">// Subsystems</p>
+            <ul>
+              <li><strong>Drivetrain</strong> — dual-axle, belt-and-gear driven; iterated after wire drag and belt tension were costing wheel friction.</li>
+              <li><strong>Sheep dispenser</strong> — went through three iterations (ramp turnstile → vertical dispenser → piston-actuated vertical dispenser) chasing a 95% reliable single-sheep release, root-causing each jam before redesigning.</li>
+              <li><strong>Sweeping "wing" mechanism</strong> — hinged, spring-loaded arms released by a locking rod to sweep torches onto the target.</li>
+              <li><strong>Three-stage telescoping arm</strong> — concentric PVC pipes linked by nylon thread and a motor-driven spool, to extend and flip a lever roughly 42" away.</li>
+            </ul>
+          </div>
+          <div class="panel-card reveal">
+            <p class="card-label">// Process</p>
+            <p>Used a function tree to translate competition tasks into engineering requirements (e.g. "Extinguish Fire" became "Activate Lever"), then a morph chart to compare candidate mechanisms before committing to CAD and fabrication — for example, weighing a simple mechanical turnstile against a pressurized piston system for the sheep task before building and testing both.</p>
+          </div>
+          <div class="panel-card reveal">
+            <p class="card-label">// Results</p>
+            <p>Scored above the field median in each sprint (own score ~50–70 vs. a median of ~40 in Sprint 2; ~70 vs ~70 in Sprint 3) and reached 95%+ task completion by final competition week, finishing 12th out of 54 total teams.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="catalog">
+        <article class="catalog-card reveal" id="research">
+          <p class="catalog-ref">P02</p>
+          <h3>Research — MiR &amp; UR10 Integration</h3>
+          <p class="fine-print">Innovation Factory at UGA · Undergraduate Researcher with Dr. Jaime Camelio</p>
           <ul>
             <li>Researched integrating mobile robots (MiR) and a UR10 arm into a technology-focused production line.</li>
             <li>Used ROS, OpenCV, AR tags, and various sensors to automate the process and improve throughput.</li>
             <li>Surveyed current literature to identify further improvement opportunities.</li>
           </ul>
-        </div>
-      </details>
-      <details class="card">
-        <summary>
-          <span class="card-title">The Gift of Learning — Co-Founder &amp; Executive Director</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <ul>
-            <li>Recruited 1,000+ tutors, students, and ambassadors internationally; built partnerships with nonprofits, schools, and industry.</li>
-            <li>Led donation drives distributing 1,000+ books and $200+ in school supplies to students in Ghana, the Philippines, and beyond.</li>
-          </ul>
-        </div>
-      </details>
+          <div class="tags"><span>ROS</span><span>OpenCV</span><span>UR10</span><span>MiR</span></div>
+        </article>
+
+        <article class="catalog-card reveal" id="tsa">
+          <p class="catalog-ref">P03 <span>TSA · NATIONAL AWARDS</span></p>
+          <h3>Animatronics &amp; Flight</h3>
+          <p>Competition prototypes from concept through testing for Animatronics, Flight Design, and Manufacturing Prototype — including 1st place at state in Animatronics and 6th place at nationals.</p>
+          <div class="tags"><span>Mechanisms</span><span>Flight</span></div>
+        </article>
+
+        <article class="catalog-card catalog-wide reveal" id="cad">
+          <div class="wide-text">
+            <p class="catalog-ref">P04</p>
+            <h3>Advanced CAD</h3>
+            <p>Solid modeling, freeform surfacing, and 3D-sketch/sweep exercises — dimensioned drawing sheets with section views, isometrics, and title blocks — plus full multi-part assemblies of a radial engine and a gearbox.</p>
+            <div class="tags"><span>Autodesk Inventor</span><span>Assemblies</span><span>Surfacing</span><span>Drawings</span><span>GD&amp;T</span></div>
+            <a class="card-link" href="assets/CAD.pdf" target="_blank" rel="noopener" type="application/pdf">View CAD portfolio (PDF, 25 pages) ↗</a>
+          </div>
+          <div class="video-grid">
+            <figure>
+              <video src="assets/videos/radial-engine.mp4" poster="assets/videos/radial-engine.jpg" muted loop playsinline preload="metadata" aria-label="Animation of a radial engine CAD assembly with a three-blade propeller"></video>
+              <figcaption>Radial engine assembly</figcaption>
+            </figure>
+            <figure>
+              <video src="assets/videos/gearbox.mp4" poster="assets/videos/gearbox.jpg" muted loop playsinline preload="metadata" aria-label="Animation of a gearbox CAD assembly with helical gears, shafts, and bearings"></video>
+              <figcaption>Gearbox assembly</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
+  <!-- ============ 03 EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>03</span> / Education &amp; Leadership</p>
+      <h2 class="section-title reveal">Education &amp; <span class="accent">Leadership</span>.</h2>
 
-  <!-- ============ INTERNSHIPS ============ -->
-  <section class="panel" id="internships">
-    <div class="panel-head">
-      <h2>Internships</h2>
-    </div>
-    <div class="accordion company-list">
-      <details class="card company-card" id="boeing" open>
-        <summary><span class="card-title">Boeing <span class="company-role">— Stress Analysis Intern — May 2026 to August 2026</span></span><span class="chev">＋</span></summary>
-        <div class="card-body company-body">
-
-
-    <div class="accordion">
-
-      <details class="card" open>
-        <summary>
-          <span class="card-title">General</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <ul>
-            <li>Reviewed aircraft seat certification packages for compliance with applicable FAR regulations and Boeing engineering requirements, evaluating supplier documentation supporting business-class seat certification.</li>
-            <li>Evaluated seat load cases and load paths, cross-checking FEM results at seat-leg attachments against supplier analyses, and reviewed CATIA models to verify geometry across drawings, analysis models, and certification documentation.</li>
-            <li>Built a Power BI dashboard that automated daily project-status updates from internal tracking software — burndown, KPIs, and delay drivers — removing a weekly manual Excel report from senior engineering meetings.</li>
+      <div class="edu-grid">
+        <div class="panel-card edu-main reveal">
+          <p class="card-label">2024 – MAY 2027</p>
+          <h3 class="edu-school">Georgia Institute of Technology</h3>
+          <p class="feature-role">B.S. Mechanical Engineering · GPA 3.9</p>
+          <h4 class="sub">Relevant classes</h4>
+          <ul class="chip-list">
+            <li>Machine Design</li>
+            <li>Fluid Mechanics</li>
+            <li>Thermodynamics</li>
+            <li>Deformable Bodies / Mechanics of Materials</li>
+            <li>System Dynamics</li>
+            <li>Experimental Methods</li>
+            <li>Design and Manufacturing</li>
+            <li>Heat Transfer</li>
+            <li>Creative Decisions &amp; Design (ME 2110)</li>
           </ul>
         </div>
-      </details>
-
-      <details class="card">
-        <summary>
-          <span class="card-title">Structural Panel Design</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <h3>Project Overview</h3>
-          <p>As part of a week-long Boeing Structures training mock project, I completed a representative aircraft modification from initial requirements through physical installation. The project involved designing a penetration through an existing structural panel for a ventilation duct and developing the bracket, reinforcement, and fastener configuration required to support the installation.</p>
-          <p>The project simulated the structural design workflow used to translate a coordination-sheet request into a manufacturable and installable solution.</p>
-
-          <h3>Methodology</h3>
-          <ol class="project-methodology">
-            <li>
-              <h4>Defined requirements and constraints</h4>
-              <p>I reviewed the coordination sheet to identify the requested penetration, bracket installation, applied loads, and surrounding structural geometry. I identified additional information needed for the analysis, including web and bracket thicknesses, material properties, and allowable stresses.</p>
-              <p>I then applied the structural design criteria provided during the training for fastener pitch, edge margins, clearances, reinforcement geometry, and material thickness relationships. I also distinguished between fixed geometry and dimensions that could be modified, allowing the penetration and bracket location to be adjusted within the permitted design envelope.</p>
-            </li>
-            <li>
-              <h4>Performed structural analysis</h4>
-              <p>Using the provided vent loads and installation geometry, I determined how the loads would transfer through the bracket into the surrounding structure. I calculated the resulting bending moment and bracket section properties, then evaluated the resulting bending stress against the applicable allowable.</p>
-              <p>From this analysis, I determined the minimum structural section required and identified the need for additional reinforcement around the penetration.</p>
-            </li>
-            <li>
-              <h4>Designed the doubler and restored the load path</h4>
-              <p>I designed a local doubler to reinforce the existing web and restore the load path interrupted by the new penetration. The doubler thickness and overall dimensions were selected based on the existing web geometry, structural requirements, available installation space, and the design criteria provided during training.</p>
-              <p>I also evaluated the running load through the web and determined the load interrupted by the penetration, which established the load that needed to be redistributed through the doubler and its attachments.</p>
-            </li>
-            <li>
-              <h4>Developed the fastener layout</h4>
-              <p>I selected Hi-Lok fasteners and developed the attachment pattern required to transfer load between the web and doubler. The layout was designed while satisfying fastener spacing, edge-margin, penetration-clearance, and installation requirements.</p>
-              <p>Where possible, I adjusted the bracket and penetration geometry to utilize existing attachment locations, reducing unnecessary modifications while also improving the structural load path.</p>
-            </li>
-            <li>
-              <h4>Iterated and verified the final design</h4>
-              <p>I iterated the penetration location, bracket geometry, doubler dimensions, and fastener pattern as a complete system. The final configuration was checked for bracket bending, reinforcement capability, load transfer, fastener arrangement, and compliance with the structural design criteria provided during the training.</p>
-            </li>
-            <li>
-              <h4>Fabricated and installed the design</h4>
-              <p>After completing the analysis and finalizing the design, the components were fabricated for physical validation, including <strong>3D printing the designed bracket</strong>. I then installed the bracket, doubler, fasteners, and penetration configuration on a representative mock aircraft structure.</p>
-              <p>This final assembly provided hands-on experience translating an analytical design into hardware and demonstrated the importance of considering <strong>manufacturability, accessibility, tolerances, fastener installation, and assembly sequence</strong> during the design process.</p>
-            </li>
-          </ol>
-
-          <h3>Outcome</h3>
-          <p>The week-long project took a representative aircraft modification through the complete engineering workflow.</p>
-
-          <h3>Project Scope &amp; Limitations</h3>
-          <p>This was a one-week training project intended to introduce the structural design and installation workflow rather than replicate the full aircraft modification process. As a result, several aspects of a production design were simplified or provided as assumptions. A real aircraft modification of this type would require significantly more analysis, documentation, testing, and cross-functional coordination before being approved for installation.</p>
-          <p>Additional considerations in a production environment could include detailed material selection, fatigue and damage-tolerance analysis, additional joint and fastener failure modes, manufacturing and assembly tolerances, corrosion protection, accessibility and maintainability, tooling and installation planning, inspection requirements, and verification of interfaces with surrounding aircraft systems. The design would also undergo formal engineering reviews and require collaboration across Structures, Design, Manufacturing, Systems, Quality, and other relevant teams before ultimately satisfying applicable certification and airworthiness requirements.</p>
-          <p>The project therefore focused specifically on developing the <strong>fundamental structural design process—interpreting requirements, understanding the load path, performing preliminary structural calculations, designing reinforcement and attachments, and translating the resulting design into a physical mock-up.</strong></p>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary>
-          <span class="card-title">CATIA Class</span>
-          <span class="chev">＋</span>
-        </summary>
-        <div class="card-body">
-          <p class="fine-print">Practice models built during a Boeing training course — not production hardware.</p>
-          <div class="cad-grid">
-            <figure>
-              <img src="assets/boeing-cad-1.png" alt="CATIA assembly study showing a linkage cluster with a computed center of gravity marker">
-              <figcaption>Linkage/bracket assembly study — center-of-gravity callout generated by CATIA</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/boeing-cad-2.png" alt="CATIA surface model of a fuselage-like nose section">
-              <figcaption>Fuselage-section surfacing exercise</figcaption>
-            </figure>
+        <div class="edu-side">
+          <div class="panel-card reveal">
+            <p class="card-label">LEADERSHIP · MAY 2020 – AUG 2023</p>
+            <h3 class="edu-school">The Gift of Learning</h3>
+            <p class="feature-role">Co-Founder &amp; Executive Director</p>
+            <ul>
+              <li>Recruited 1,000+ tutors, students, and ambassadors internationally.</li>
+              <li>Established partnerships with 501(c)(3) nonprofits, educational institutions, and industry leaders to expand the program’s reach and impact.</li>
+              <li>Organized donation drives for students in underserved communities in Ghana, the Philippines, and other countries — distributing 1,000+ books and $200+ in stationery.</li>
+            </ul>
+          </div>
+          <div class="panel-card reveal" id="tsa-leadership">
+            <p class="card-label">LEADERSHIP · AUG 2019 – MAR 2023</p>
+            <h3 class="edu-school">Technology Student Association</h3>
+            <p class="feature-role">State Officer (State Reporter) · Chapter Officer</p>
+            <ul>
+              <li>Led mechanical design from initial concept to final prototype testing — earning 1st place at state in Animatronics and 6th place at nationals.</li>
+              <li>Produced detailed manufacturing drawings in 3D CAD for Manufacturing Prototype, Animatronics, and Flight Design competitions.</li>
+              <li>Coordinated mechanical engineering projects across design, drawings, and prototype procurement to keep work on schedule.</li>
+              <li>Used AutoCAD and operated CNC milling and routing equipment to improve hardware and storage in the shop.</li>
+            </ul>
           </div>
         </div>
-      </details>
-
+      </div>
     </div>
+  </section>
+
+  <!-- ============ 04 SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>04</span> / Skills</p>
+      <h2 class="section-title reveal">The <span class="accent">tools</span> I reach for.</h2>
+
+      <div class="skill-rows">
+        <div class="skill-row reveal">
+          <p class="skill-cat"><span>/ 01</span>CAD</p>
+          <div class="tags"><span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span><span>GD&amp;T</span></div>
         </div>
-      </details>
-      <details class="card company-card" id="ge">
-        <summary><span class="card-title">GE Vernova <span class="company-role">— Design and Analysis Engineering Intern — June 2025 to August 2025</span></span><span class="chev">＋</span></summary>
-        <div class="card-body company-body">
-          <ul>
-            <li>Performed lifing analysis on turbine blade coatings using ANSYS APDL, including temperature/pressure mapping and structural, creep, oxidation, and LCF simulation, validated against field data.</li>
-            <li>Improved component salvageability by modifying tip-weld repair geometry; led a feasibility study on increased weld depth, working cross-functionally with Heat Transfer and Repair Engineering.</li>
-            <li>Built a Python script generating 3D response-surface models for creep-deflection prediction, improving deflection-based Operating Impact Factor (OIF) accuracy.</li>
-            <li>Ran circumferential tolerance stack-up analysis of adjacent turbine blades — machining tolerance, coating thickness, and thermal expansion — to assess interference risk in operation.</li>
-          </ul>
+        <div class="skill-row reveal">
+          <p class="skill-cat"><span>/ 02</span>Analysis</p>
+          <div class="tags"><span>ANSYS</span><span>FEA</span></div>
         </div>
-      </details>
-      <details class="card company-card" id="shaw">
-        <summary><span class="card-title">Shaw Industries <span class="company-role">— Project Engineer Intern — June 2024 to August 2024</span></span><span class="chev">＋</span></summary>
-        <div class="card-body company-body">
-          <ul>
-            <li>Designed a Tenter Width Monitor operating at 350°F to continuously track chain-width deviation, supporting preventive maintenance and cutting unplanned machine downtime.</li>
-            <li>Designed and oversaw construction of new guarding for the shoe steamer, updated the plant layout in CAD, and assisted installing a new reversing station.</li>
-            <li>Worked directly with operators and manufacturers to identify problems on the floor and land practical design fixes.</li>
-          </ul>
+        <div class="skill-row reveal">
+          <p class="skill-cat"><span>/ 03</span>Programming &amp; Robotics</p>
+          <div class="tags"><span>Python</span><span>Java</span><span>ROS</span><span>OpenCV</span></div>
         </div>
-      </details>
-      <details class="card company-card" id="ivue">
-        <summary><span class="card-title">IVue <span class="company-role">— Engineering Intern — May 2023 to August 2023</span></span><span class="chev">＋</span></summary>
-        <div class="card-body company-body">
-          <ul>
-            <li>Designed a search-and-rescue drone spotlight module in Fusion 360, accounting for aerodynamic load, 3D-printed material properties, and field operating conditions.</li>
-            <li>Redesigned the drone's cover for easier access to the electronics, streamlining maintenance and customization.</li>
-          </ul>
+        <div class="skill-row reveal">
+          <p class="skill-cat"><span>/ 04</span>Manufacturing</p>
+          <div class="tags"><span>3D Printing</span><span>CNC Milling</span><span>Laser Cutter</span><span>Plasma Cutter</span><span>Lathe</span><span>Woodworking Tools</span></div>
         </div>
-      </details>
+        <div class="skill-row reveal">
+          <p class="skill-cat"><span>/ 05</span>Data</p>
+          <div class="tags"><span>MATLAB</span><span>Power BI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>05</span> / Contact</p>
+      <h2 class="contact-title reveal">Let’s build something <span class="accent">that holds up</span>.</h2>
+      <div class="contact-links reveal">
+        <a class="btn btn-primary" href="mailto:shivangigosain3@gmail.com">shivangigosain3@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/shivangi-gosain/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>Built by Shivangi Gosain · <a href="assets/resume.pdf" target="_blank" rel="noopener">Résumé</a> · <a href="https://www.linkedin.com/in/shivangi-gosain/" target="_blank" rel="noopener">LinkedIn</a></p>
+  <div class="wrap footer-inner">
+    <p>Built by Shivangi Gosain</p>
+    <a href="#top">Back to top ↑</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
