@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shivangi Gosain — Mechanical Engineer</title>
-<meta name="description" content="Shivangi Gosain — Mechanical Engineering at Georgia Tech. Structures, aerospace, and mechanisms. Internships at Boeing, GE Vernova, Shaw Industries, and IVue.">
+<title>Shivangi Gosain | Mechanical Engineer</title>
+<meta name="description" content="Shivangi Gosain, Mechanical Engineering at Georgia Tech. Structures, aerospace, and mechanisms. Internships at Boeing, GE Vernova, Shaw Industries, and IVue.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>
   try {
@@ -37,12 +38,13 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <p class="zone-ref reveal">SHEET 1 / REV A · MECHANICAL ENGINEERING · GEORGIA TECH</p>
     <h1 class="reveal">Shivangi<br><span class="accent">Gosain</span></h1>
     <div class="hero-row">
       <div class="hero-lede reveal">
-        <p>Mechanical Engineering student at Georgia Tech focused on aerospace, structures, and mechanisms. I’ve interned at <a class="co" href="#boeing">Boeing</a>, <a class="co" href="#ge">GE Vernova</a>, and <a class="co" href="#shaw">Shaw Industries</a> — working on aircraft seat structures, turbine blade repair analysis, and manufacturing improvements.</p>
+        <p>Mechanical Engineering student at Georgia Tech focused on aerospace, structures, and mechanisms. I’ve interned at <a class="co" href="#boeing">Boeing</a>, <a class="co" href="#ge">GE Vernova</a>, and <a class="co" href="#shaw">Shaw Industries</a>, working on aircraft seat structures, turbine blade repair analysis, and manufacturing improvements.</p>
       </div>
       <div class="hero-actions reveal">
         <a class="btn btn-primary" href="#internships">View experience ↓</a>
@@ -59,7 +61,7 @@
       <div class="hero-box reveal">
         <p class="box-label">Skills</p>
         <div class="tags side-tags">
-          <span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span><span>Autodesk Inventor</span><span>GD&amp;T</span>
+          <span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Autodesk Fusion</span><span>GD&amp;T</span>
           <span>ANSYS</span><span>FEA</span><span>MATLAB</span><span>Stack-Up Analysis</span>
           <span>Python</span><span>Java</span><span>ROS</span><span>OpenCV</span>
           <span>CNC Milling</span><span>3D Printing</span><span>Data Acquisition</span><span>Excel VBA</span><span>Power BI</span>
@@ -86,23 +88,28 @@
       <!-- Boeing -->
       <article class="feature" id="boeing">
         <div class="feature-side">
+          <div class="feature-head">
           <p class="feature-ref">REF_E01 · MAY – AUG 2026 <span>01 / 04</span></p>
           <h3 class="feature-title">Boeing</h3>
           <p class="feature-role">Stress Analysis Intern</p>
+          </div>
           <div class="tags"><span>CATIA</span><span>FEM</span><span>FAR compliance</span><span>Power BI</span></div>
         </div>
         <div class="feature-main">
-          <div class="panel-card reveal">
-            <p class="card-label">// Projects</p>
+          <details class="panel-card drop reveal">
+            <summary class="card-label">// Projects <span class="chev">＋</span></summary>
+            <div class="drop-body">
             <ul>
               <li>Reviewed business-class seat certification packages for FAR and Boeing requirements.</li>
               <li>Checked seat load paths and supplier FEM results at seat-leg attachments, and verified geometry across CATIA models and drawings.</li>
               <li>Built a Power BI dashboard that automated daily project-status reporting, replacing a weekly manual Excel report.</li>
             </ul>
-          </div>
+            </div>
+          </details>
 
-          <div class="panel-card reveal">
-            <p class="card-label">// Structural Panel Design</p>
+          <details class="panel-card drop reveal">
+            <summary class="card-label">// Structural Panel Design <span class="chev">＋</span></summary>
+            <div class="drop-body">
             <p>Week-long Boeing Structures training project: designed a vent-duct penetration through a structural panel, with its bracket, doubler, and fasteners, then built and installed it on a mock structure.</p>
             <ol class="steps steps-detail">
               <li><strong>Requirements</strong><span>Loads, geometry, and design criteria from the coordination sheet</span></li>
@@ -116,7 +123,7 @@
                   <h4><span>01</span> Requirements</h4>
                   <ul>
                     <li>Pulled the penetration, bracket, applied loads, and surrounding geometry from the coordination sheet.</li>
-                    <li>Identified missing inputs — web and bracket thickness, material properties, allowable stresses.</li>
+                    <li>Identified missing inputs: web and bracket thickness, material properties, and allowable stresses.</li>
                     <li>Applied design criteria for fastener pitch, edge margin, clearance, and reinforcement, and separated fixed geometry from what could move.</li>
                   </ul>
                 </div>
@@ -139,11 +146,13 @@
                 <p class="fine-print">Scope: a one-week training exercise with simplified inputs. A production modification would add fatigue and damage-tolerance analysis, more failure modes, corrosion protection, inspection planning, and formal cross-functional review before certification.</p>
               </div>
             </details>
-          </div>
+            </div>
+          </details>
 
-          <div class="panel-card reveal">
-            <p class="card-label">// CATIA Class</p>
-            <p class="fine-print">Practice models built during a Boeing training course — not production hardware.</p>
+          <details class="panel-card drop reveal">
+            <summary class="card-label">// CATIA Class <span class="chev">＋</span></summary>
+            <div class="drop-body">
+            <p class="fine-print">Practice models built during a Boeing training course, not production hardware.</p>
             <div class="cad-grid">
               <figure>
                 <img src="assets/boeing-cad-1.png" alt="CATIA assembly study showing a linkage cluster with a computed center of gravity marker" loading="lazy">
@@ -152,67 +161,80 @@
                 <img src="assets/boeing-cad-2.png" alt="CATIA surface model of a fuselage-like nose section" loading="lazy">
               </figure>
             </div>
-          </div>
+            </div>
+          </details>
         </div>
       </article>
 
       <!-- GE Vernova -->
       <article class="feature" id="ge">
         <div class="feature-side">
+          <div class="feature-head">
           <p class="feature-ref">REF_E02 · JUN – AUG 2025 <span>02 / 04</span></p>
           <h3 class="feature-title">GE Vernova</h3>
           <p class="feature-role">Design and Analysis Engineering Intern</p>
+          </div>
           <div class="tags"><span>ANSYS</span><span>Siemens NX</span><span>Python</span><span>Stack-Up Analysis</span></div>
         </div>
         <div class="feature-main">
-          <div class="panel-card reveal">
-            <p class="card-label">// Projects</p>
+          <details class="panel-card drop reveal">
+            <summary class="card-label">// Projects <span class="chev">＋</span></summary>
+            <div class="drop-body">
             <ul>
               <li>Performed lifing analysis on turbine blade coatings using ANSYS APDL, including temperature/pressure mapping and structural, creep, oxidation, and LCF simulation, validated against field data.</li>
               <li>Improved component salvageability by modifying tip-weld repair geometry; led a feasibility study on increased weld depth, working cross-functionally with Heat Transfer and Repair Engineering.</li>
               <li>Built a Python script generating 3D response-surface models for creep-deflection prediction, improving deflection-based Operating Impact Factor (OIF) accuracy.</li>
-              <li>Ran circumferential tolerance stack-up analysis of adjacent turbine blades — machining tolerance, coating thickness, and thermal expansion — to assess interference risk in operation.</li>
+              <li>Ran circumferential tolerance stack-up analysis of adjacent turbine blades (machining tolerance, coating thickness, and thermal expansion) to assess interference risk in operation.</li>
             </ul>
-          </div>
+            </div>
+          </details>
         </div>
       </article>
 
       <!-- Shaw -->
       <article class="feature" id="shaw">
         <div class="feature-side">
+          <div class="feature-head">
           <p class="feature-ref">REF_E03 · JUN – AUG 2024 <span>03 / 04</span></p>
           <h3 class="feature-title">Shaw Industries</h3>
           <p class="feature-role">Project Engineer Intern</p>
-          <div class="tags"><span>Fusion 360</span><span>Product Development</span><span>CNC Milling</span><span>Instrumentation</span><span>Data Acquisition</span><span>Excel VBA</span><span>3D Printing</span></div>
+          </div>
+          <div class="tags"><span>Autodesk Fusion</span><span>Product Development</span><span>CNC Milling</span><span>Instrumentation</span><span>Data Acquisition</span><span>Excel VBA</span><span>3D Printing</span></div>
         </div>
         <div class="feature-main">
-          <div class="panel-card reveal">
-            <p class="card-label">// Projects</p>
+          <details class="panel-card drop reveal">
+            <summary class="card-label">// Projects <span class="chev">＋</span></summary>
+            <div class="drop-body">
             <ul>
               <li>Designed a Tenter Width Monitor operating at 350°F to continuously track chain-width deviation, supporting preventive maintenance and cutting unplanned machine downtime.</li>
               <li>Designed and oversaw construction of new guarding for the shoe steamer, updated the plant layout in CAD, and assisted installing a new reversing station.</li>
               <li>Worked directly with operators and manufacturers to identify problems on the floor and land practical design fixes.</li>
             </ul>
-          </div>
+            </div>
+          </details>
         </div>
       </article>
 
       <!-- IVue -->
       <article class="feature" id="ivue">
         <div class="feature-side">
+          <div class="feature-head">
           <p class="feature-ref">REF_E04 · MAY – AUG 2023 <span>04 / 04</span></p>
           <h3 class="feature-title">IVue</h3>
           <p class="feature-role">Engineering Intern</p>
-          <div class="tags"><span>Fusion 360</span><span>3D printing</span><span>Drones</span></div>
+          </div>
+          <div class="tags"><span>Autodesk Fusion</span><span>3D printing</span><span>Drones</span></div>
         </div>
         <div class="feature-main">
-          <div class="panel-card reveal">
-            <p class="card-label">// Search-and-rescue drone</p>
+          <details class="panel-card drop reveal">
+            <summary class="card-label">// Search-and-rescue drone <span class="chev">＋</span></summary>
+            <div class="drop-body">
             <ul>
-              <li>Designed a search-and-rescue drone spotlight module in Fusion 360, accounting for aerodynamic load, 3D-printed material properties, and field operating conditions.</li>
+              <li>Designed a search-and-rescue drone spotlight module in Autodesk Fusion, accounting for aerodynamic load, 3D-printed material properties, and field operating conditions.</li>
               <li>Redesigned the drone's cover for easier access to the electronics, streamlining maintenance and customization.</li>
             </ul>
-          </div>
+            </div>
+          </details>
         </div>
       </article>
     </div>
@@ -235,34 +257,34 @@
           </div>
         </div>
         <div class="feature-main">
+          <div class="photo-pair reveal">
+            <figure>
+              <img src="assets/photos/me2110-showcase.jpg" alt="Finished competition robot dressed as a black dragon, in front of the team's Marty's Sheep tri-fold display board" loading="lazy" width="1400" height="1050">
+            </figure>
+            <figure>
+              <img src="assets/photos/me2110-build.jpg" alt="Robot on the competition floor showing the belt-driven drivetrain, wiring, pneumatic piston, and sheep dispenser tower" loading="lazy" width="1050" height="1400">
+            </figure>
+          </div>
           <div class="metric-row reveal">
             <div class="metric"><span class="metric-num">95%+</span><span class="metric-label">Task completion by final week</span></div>
-            <div class="metric"><span class="metric-num">12th / 54</span><span class="metric-label">Final place out of 54 teams</span></div>
+            <div class="metric"><span class="metric-num">12th</span><span class="metric-label">Final place out of 100+ teams</span></div>
           </div>
           <div class="panel-card reveal">
             <p class="card-label">// Subsystems</p>
             <ul>
-              <li><strong>Drivetrain</strong> — dual-axle, belt-and-gear driven; iterated after wire drag and belt tension were costing wheel friction.</li>
-              <li><strong>Sheep dispenser</strong> — went through three iterations (ramp turnstile → vertical dispenser → piston-actuated vertical dispenser) chasing a 95% reliable single-sheep release, root-causing each jam before redesigning.</li>
-              <li><strong>Sweeping "wing" mechanism</strong> — hinged, spring-loaded arms released by a locking rod to sweep torches onto the target.</li>
-              <li><strong>Three-stage telescoping arm</strong> — concentric PVC pipes linked by nylon thread and a motor-driven spool, to extend and flip a lever roughly 42" away.</li>
+              <li><strong>Drivetrain:</strong> dual-axle, belt-and-gear driven; iterated after wire drag and belt tension were costing wheel friction.</li>
+              <li><strong>Sheep dispenser:</strong> piston-actuated vertical dispenser triggered by a switch.</li>
+              <li><strong>Sweeping "wing" mechanism:</strong> hinged, spring-loaded arms released by a locking rod to sweep torches onto the target.</li>
+              <li><strong>Three-stage telescoping arm:</strong> concentric PVC pipes linked by nylon thread and a motor-driven spool, to extend and flip a lever roughly 42" high.</li>
             </ul>
-          </div>
-          <div class="panel-card reveal">
-            <p class="card-label">// Process</p>
-            <p>Used a function tree to translate competition tasks into engineering requirements (e.g. "Extinguish Fire" became "Activate Lever"), then a morph chart to compare candidate mechanisms before committing to CAD and fabrication — for example, weighing a simple mechanical turnstile against a pressurized piston system for the sheep task before building and testing both.</p>
-          </div>
-          <div class="panel-card reveal">
-            <p class="card-label">// Results</p>
-            <p>Scored above the field median in each sprint (own score ~50–70 vs. a median of ~40 in Sprint 2; ~70 vs ~70 in Sprint 3) and reached 95%+ task completion by final competition week, finishing 12th out of 54 total teams.</p>
           </div>
         </div>
       </article>
 
       <div class="catalog">
-        <article class="catalog-card reveal" id="research">
+        <article class="catalog-card span-all reveal" id="research">
           <p class="catalog-ref">P02</p>
-          <h3>Research — MiR &amp; UR10 Integration</h3>
+          <h3>Research: MiR &amp; UR10 Integration</h3>
           <p class="fine-print">Innovation Factory at UGA · Undergraduate Researcher with Dr. Jaime Camelio</p>
           <ul>
             <li>Researched integrating mobile robots (MiR) and a UR10 arm into a technology-focused production line.</li>
@@ -272,19 +294,68 @@
           <div class="tags"><span>ROS</span><span>OpenCV</span><span>UR10</span><span>MiR</span></div>
         </article>
 
-        <article class="catalog-card reveal" id="tsa">
-          <p class="catalog-ref">P03 <span>TSA · NATIONAL AWARDS</span></p>
-          <h3>Animatronics &amp; Flight</h3>
-          <p>Competition prototypes from concept through testing for Animatronics, Flight Design, and Manufacturing Prototype — including 1st place at state in Animatronics and 6th place at nationals.</p>
-          <div class="tags"><span>Mechanisms</span><span>Flight</span></div>
+        <article class="catalog-card anim-card reveal" id="tsa">
+          <p class="catalog-ref">P03 <span>TSA · ANIMATRONICS</span></p>
+          <h3>Animatronics</h3>
+          <div class="anim-year anim-year-media">
+            <div class="anim-text">
+              <p class="anim-tag">YR2 <span>Georgia state flower</span></p>
+              <dl>
+                <dt>Goal</dt><dd>Create an easily serviceable robot representing Georgia’s state flower, with independently moving petals.</dd>
+                <dt>Design</dt><dd>A moving flower with independent movement in each petal, coin-slot activation, a candy cannon, sound, and background lights, all integrated through Arduinos.</dd>
+                <dt>How</dt><dd>Designed 3D-printed parts in Autodesk Fusion; servo motors and Arduinos drive the movement and tie the systems together.</dd>
+                <dt>Result</dt><dd>4th place at state, with every system working.</dd>
+              </dl>
+            </div>
+            <div class="anim-media anim-media-yr2">
+              <figure class="anim-team">
+                <img src="assets/photos/flower-team.jpg" alt="The team of four at the state TSA conference standing behind the finished animatronic: a white flower in a painted hillside scene above a cabinet covered in green paper leaves, with the coin slot and LCD on the front" loading="lazy" width="1400" height="1050">
+              </figure>
+              <figure class="anim-model">
+                <model-viewer src="assets/models/flower.glb" alt="Interactive 3D model of the flower's endoskeleton assembly: 3D-printed petal arms, each driven by its own servo" camera-controls auto-rotate rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0.6" exposure="1.05" loading="lazy" reveal="auto"></model-viewer>
+                <span class="model-hint" aria-hidden="true">3D · drag</span>
+              </figure>
+              <figure class="anim-endo">
+                <img src="assets/photos/flower-endoskeleton.jpg" alt="Printed flower endoskeleton on the workbench, with a blue micro servo at each petal arm and wiring gathered at the hub" loading="lazy" width="800" height="1692">
+              </figure>
+              <figure class="anim-coin">
+                <img src="assets/photos/flower-coin-slot.jpg" alt="Chrome coin acceptor labelled Please Insert Coin, mounted on a wooden panel" loading="lazy" width="1400" height="662">
+              </figure>
+            </div>
+          </div>
+          <div class="anim-year anim-year-media">
+            <div class="anim-text">
+              <p class="anim-tag">YR1 <span>Children’s hospital</span></p>
+              <dl>
+                <dt>Goal</dt><dd>Create an easily serviceable animatronic for a children’s hospital.</dd>
+                <dt>Design</dt><dd>A moving penguin with sound, captions on an LCD, lights, and a PVC air cannon that shot confetti, with servos and Arduinos connecting the subsystems. It activates when you blow air into a hole set low and easy to reach, so kids with disabilities can use it.</dd>
+                <dt>Result</dt><dd>The animatronic worked, earning 1st place at state and 6th place at nationals.</dd>
+              </dl>
+            </div>
+            <div class="anim-media anim-media-yr1">
+              <figure class="anim-video">
+                <video src="assets/videos/penguin-dance.mp4" poster="assets/videos/penguin-dance.jpg" controls playsinline preload="none" aria-label="Video of the finished penguin animatronic dancing under purple lights, with the LCD caption screen above it"></video>
+              </figure>
+              <figure class="anim-cabinet">
+                <img src="assets/photos/penguin-cabinet.jpg" alt="Back of the animatronic cabinet with the Arduino, breadboard, wiring, and battery mounted on a wooden stand" loading="lazy" width="1200" height="568">
+              </figure>
+              <figure class="anim-mech">
+                <img src="assets/photos/penguin-mechanism.jpg" alt="Penguin's internal mechanism: 3D-printed frame on a central rod with blue servos for the flippers and a geared servo at the base for rotation, beside the plush penguin" loading="lazy" width="800" height="1692">
+              </figure>
+              <figure class="anim-elec">
+                <img src="assets/photos/penguin-electronics.jpg" alt="Close-up of the Arduinos, LCD board, and wiring inside the cabinet's wooden frame" loading="lazy" width="1200" height="568">
+              </figure>
+            </div>
+          </div>
+          <div class="tags"><span>Autodesk Fusion</span><span>3D Printing</span><span>Servos</span><span>Arduino</span></div>
         </article>
 
         <article class="catalog-card catalog-wide reveal" id="cad">
           <div class="wide-text">
             <p class="catalog-ref">P04</p>
             <h3>Advanced CAD</h3>
-            <p>Solid modeling, freeform surfacing, and 3D-sketch/sweep exercises — dimensioned drawing sheets with section views, isometrics, and title blocks — plus full multi-part assemblies of a radial engine and a gearbox.</p>
-            <div class="tags"><span>Autodesk Inventor</span><span>Assemblies</span><span>Surfacing</span><span>Drawings</span><span>GD&amp;T</span></div>
+            <p>Solid modeling, freeform surfacing, and 3D-sketch/sweep exercises; dimensioned drawing sheets with section views, isometrics, and title blocks; and full multi-part assemblies of a radial engine and a gearbox.</p>
+            <div class="tags"><span>Autodesk Fusion</span><span>Assemblies</span><span>Surfacing</span><span>Drawings</span><span>GD&amp;T</span></div>
             <a class="card-link" href="assets/CAD.pdf" target="_blank" rel="noopener" type="application/pdf">View CAD portfolio (PDF, 25 pages) ↗</a>
           </div>
           <div class="video-grid">
@@ -334,7 +405,7 @@
             <ul>
               <li>Recruited 1,000+ tutors, students, and ambassadors internationally.</li>
               <li>Established partnerships with 501(c)(3) nonprofits, educational institutions, and industry leaders to expand the program’s reach and impact.</li>
-              <li>Organized donation drives for students in underserved communities in Ghana, the Philippines, and other countries — distributing 1,000+ books and $200+ in stationery.</li>
+              <li>Organized donation drives for students in underserved communities in Ghana, the Philippines, and other countries, distributing 1,000+ books and $200+ in stationery.</li>
             </ul>
           </div>
           <div class="panel-card reveal" id="tsa-leadership">
@@ -342,7 +413,7 @@
             <h3 class="edu-school">Technology Student Association</h3>
             <p class="feature-role">State Officer (State Reporter) · Chapter Officer</p>
             <ul>
-              <li>Led mechanical design from initial concept to final prototype testing — earning 1st place at state in Animatronics and 6th place at nationals.</li>
+              <li>Led mechanical design from initial concept to final prototype testing, earning 1st place at state in Animatronics and 6th place at nationals.</li>
               <li>Produced detailed manufacturing drawings in 3D CAD for Manufacturing Prototype, Animatronics, and Flight Design competitions.</li>
               <li>Coordinated mechanical engineering projects across design, drawings, and prototype procurement to keep work on schedule.</li>
               <li>Used AutoCAD and operated CNC milling and routing equipment to improve hardware and storage in the shop.</li>
@@ -362,7 +433,7 @@
       <div class="skill-rows">
         <div class="skill-row reveal">
           <p class="skill-cat"><span>/ 01</span>CAD</p>
-          <div class="tags"><span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Fusion 360</span><span>GD&amp;T</span></div>
+          <div class="tags"><span>CATIA</span><span>Siemens NX</span><span>SolidWorks</span><span>Autodesk Fusion</span><span>GD&amp;T</span></div>
         </div>
         <div class="skill-row reveal">
           <p class="skill-cat"><span>/ 02</span>Analysis</p>
@@ -405,6 +476,7 @@
   </div>
 </footer>
 
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Theme toggle ---------- */
+  /* ---------- Theme toggle (dark by default) ---------- */
   const themeToggle = document.querySelector('.theme-toggle');
   function updateThemeToggle() {
     const isLight = document.documentElement.dataset.theme === 'light';
@@ -18,23 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemeToggle();
   });
 
-  /* ---------- Scroll progress bar ---------- */
+  /* ---------- Scroll progress bar + active nav link ---------- */
   const bar = document.querySelector('.scroll-progress span');
-  let ticking = false;
-  function updateProgress() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
-    ticking = false;
-  }
-  window.addEventListener('scroll', () => {
-    if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; }
-  }, { passive: true });
-  updateProgress();
-
-  /* ---------- Active nav link ---------- */
   const navLinks = [...document.querySelectorAll('.nav-links a')];
   const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  function setActive() {
+  let ticking = false;
+  function onScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
     const y = window.scrollY + window.innerHeight * 0.35;
     let current = null;
     sections.forEach(s => { if (s.offsetTop <= y) current = s; });
@@ -43,9 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
       a.classList.toggle('active', on);
       if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
+    ticking = false;
   }
-  window.addEventListener('scroll', setActive, { passive: true });
-  setActive();
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
 
   /* ---------- Reveal on scroll ---------- */
   const reveals = document.querySelectorAll('.reveal');
@@ -58,34 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     reveals.forEach(el => io.observe(el));
-  }
-
-  /* ---------- Count-up stats ---------- */
-  const counters = document.querySelectorAll('[data-count]');
-  function format(n, decimals, suffix) {
-    return n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
-  }
-  function runCounter(el) {
-    const target = parseFloat(el.dataset.count);
-    const decimals = parseInt(el.dataset.decimals || '0', 10);
-    const suffix = el.dataset.suffix || '';
-    const start = performance.now();
-    const dur = 1200;
-    function step(now) {
-      const t = Math.min((now - start) / dur, 1);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = format(target * eased, decimals, suffix);
-      if (t < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  if (!reduceMotion && 'IntersectionObserver' in window) {
-    const cio = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { runCounter(e.target); cio.unobserve(e.target); }
-      });
-    }, { threshold: 0.6 });
-    counters.forEach(el => cio.observe(el));
   }
 
   /* ---------- CAD videos: play while on screen ---------- */
@@ -102,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     videos.forEach(v => vio.observe(v));
   }
 
-  /* ---------- Old deep links (#research, company ids) ---------- */
+  /* ---------- Deep links (#boeing, #research, ...) ---------- */
   const hash = window.location.hash.slice(1);
   if (hash) {
     const target = document.getElementById(hash);
@@ -112,3 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+/* 3D model: no auto-spin for people who prefer reduced motion */
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('model-viewer[auto-rotate]').forEach(m => m.removeAttribute('auto-rotate'));
+}
